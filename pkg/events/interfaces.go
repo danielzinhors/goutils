@@ -12,7 +12,7 @@ type EventHandlerInterface interface {
 	Handle(event EventInterface)
 }
 
-type EventDispatcherInerface interface {
+type EventDispatcherInterface interface {
 	register(eventName string, handler EventHandlerInterface) error
 	Dispatch(event EventInterface) error
 	Remove(eventName string, handler EventHandlerInterface) error
